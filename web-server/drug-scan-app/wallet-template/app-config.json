@@ -1,0 +1,31 @@
+{
+  "theme": "default",
+  "appVersion":"1.0.0",
+  "basePagesUrl": "/pages",
+  "profile": {
+    "username": "SAlboaie",
+    "email": "sinica@axiologic.net",
+    "avatar": "/resources/images/cardinal.png"
+  },
+  "menu": {
+    "defaultMenuConfig": {
+      "icon": "fa-bars",
+      "type": "route",
+      "component": "psk-page-loader",
+      "exact": true,
+      "historyType": "browser",
+      "404": "/pages/404.html"
+    },
+    "pages": [
+      {
+        "name": "Scan Package"
+      },
+      {
+        "name": "History"
+      },
+      {
+        "name": "Profile"
+      }
+    ]
+  }
+}

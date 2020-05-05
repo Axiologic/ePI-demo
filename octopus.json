@@ -1,21 +1,248 @@
 {
-  "workDir": ".",
-  "dependencies": [
-    {
-      "name": "privatesky",
-      "src": "http://github.com/privatesky/privatesky.git",
-      "actions": [
+    "workDir": ".",
+    "dependencies": [
         {
-          "type": "smartClone",
-          "target": ".",
-          "collectLog": false
+            "name": "privatesky",
+            "src": "http://github.com/privatesky/privatesky.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd privatesky && npm install"
+                }
+            ]
         },
         {
-          "type": "execute",
-          "cmd": "cd privatesky && npm install"
+            "name": "menu-wallet",
+            "src": "http://github.com/privatesky/menu-wallet.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd menu-wallet && npm install"
+                }
+            ]
+        },
+        {
+            "name": "drug-scan-app",
+            "src": "http://github.com/axiologic/drug-scan-app.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd drug-scan-app && npm install"
+                }
+            ]
+        },
+        {
+            "name": "leaflet-manager-app",
+            "src": "http://github.com/axiologic/leaflet-manager-app.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd leaflet-manager-app && npm install"
+                }
+            ]
+        },
+        {
+            "name": "leaflet-approval-app",
+            "src": "http://github.com/axiologic/leaflet-approval-app.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd leaflet-approval-app && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/drug-scan-app/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/drug-scan-app/loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/leaflet-manager-app/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/leaflet-manager-app/loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/leaflet-approval-app/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/leaflet-approval-app/loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "profile-app",
+            "src": "http://github.com/privatesky/profile-app.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd profile-app && npm install"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "build": []
+    ],
+    "build": [
+        {
+            "name": "drug-scan-app_bind_to_menu-wallet",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd menu-wallet && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./menu-wallet/seed",
+                    "target": "./web-server/drug-scan-app/wallet-template/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "leaflet-manager-app_bind_to_menu-wallet",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd menu-wallet && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./menu-wallet/seed",
+                    "target": "./web-server/leaflet-manager-app/wallet-template/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "leaflet-approval-app_bind_to_menu-wallet",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd menu-wallet && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./menu-wallet/seed",
+                    "target": "./web-server/leaflet-approval-app/wallet-template/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "drug-scan-app_bind_to_drug-scan-app",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd drug-scan-app && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./drug-scan-app/seed",
+                    "target": "./web-server/drug-scan-app/apps/drug-scan-app/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/drug-scan-app/drug-scan-app-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-scan-app/drug-scan-app-template/readme"
+                }
+            ]
+        },
+        {
+            "name": "drug-scan-app_bind_to_profile-app",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd profile-app && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./profile-app/seed",
+                    "target": "./web-server/drug-scan-app/apps/profile-app/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/drug-scan-app/profile-app-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-scan-app/profile-app-template/readme"
+                }
+            ]
+        }
+    ]
 }

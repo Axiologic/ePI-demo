@@ -2,6 +2,7 @@
   "port": 8080,
   "storage": "../web-server",
   "zeromqForwardAddress": "tcp://127.0.0.1:5001",
+  "preventRateLimit": true,
   "endpoints": ["virtualMQ", "staticServer", "edfs", "filesManager", "dossierWizard"],
   "endpointsConfig": {
     "virtualMQ": {

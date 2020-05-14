@@ -135,6 +135,21 @@
                     "cmd": "cd profile-app && npm install"
                 }
             ]
+        },
+        {
+            "name": "secure-channels",
+            "src": "http://github.com/privatesky/secure-channels.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd secure-channels && npm install"
+                }
+            ]
         }
     ],
     "build": [
@@ -241,6 +256,84 @@
                 {
                     "type": "execute",
                     "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-scan-app/profile-app-template/readme"
+                }
+            ]
+        },
+        {
+            "name": "leaflet-manager-app_bind_to_leaflet-manager-app",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd leaflet-manager-app && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./leaflet-manager-app/seed",
+                    "target": "./web-server/leaflet-manager-app/apps/leaflet-manager-app/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/leaflet-manager-app/leaflet-manager-app-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/leaflet-manager-app-template/readme"
+                }
+            ]
+        },
+        {
+            "name": "leaflet-manager-app_bind_to_secure-channels",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd secure-channels && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./secure-channels/seed",
+                    "target": "./web-server/leaflet-manager-app/apps/secure-channels/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/leaflet-manager-app/secure-channels-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/secure-channels-template/readme"
+                }
+            ]
+        },
+        {
+            "name": "leaflet-manager-app_bind_to_profile-app",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd profile-app && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./profile-app/seed",
+                    "target": "./web-server/leaflet-manager-app/apps/profile-app/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/leaflet-manager-app/profile-app-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/profile-app-template/readme"
                 }
             ]
         }

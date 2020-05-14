@@ -21,10 +21,16 @@
         "name": "Home"
       },
       {
-        "name": "Scan Package"
+        "name": "Products"
       },
       {
-        "name": "History"
+        "name": "Contacts"
+      },
+      {
+        "name": "Inbox"
+      },
+      {
+        "name": "Outbox"
       },
       {
         "name": "Profile"

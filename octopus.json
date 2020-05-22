@@ -150,6 +150,51 @@
                     "cmd": "cd secure-channels && npm install"
                 }
             ]
+        },
+        {
+            "name": "dossier-explorer-wallet",
+            "src": "https://github.com/privatesky/dossier-explorer-wallet.git/",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-wallet && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/dossier-explorer-wallet/loader",
+            "src": "http://github.com/privatesky/web-dossier-loader.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/dossier-explorer-wallet/loader && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/fabricate-product",
+            "src": "http://github.com/axiologic/fabricate-product.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/fabricate-product && npm install"
+                }
+            ]
         }
     ],
     "build": [
@@ -334,6 +379,24 @@
                 {
                     "type": "execute",
                     "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/profile-app-template/readme"
+                }
+            ]
+        },
+        {
+            "name": "dossier-explorer-wallet_bind_to_dossier-explorer-wallet",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd dossier-explorer-wallet && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./dossier-explorer-wallet/seed",
+                    "target": "./web-server/dossier-explorer-wallet/wallet-template/seed",
+                    "options": {
+                        "overwrite": true
+                    }
                 }
             ]
         }

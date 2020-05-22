@@ -13,6 +13,10 @@
                 {
                     "type": "execute",
                     "cmd": "cd privatesky && npm install"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd privatesky && npm build"
                 }
             ]
         },
@@ -397,6 +401,58 @@
                     "options": {
                         "overwrite": true
                     }
+                }
+            ]
+        },
+        {
+            "name": "leaflet-approval-app_bind_to_secure-channels",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd secure-channels && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./secure-channels/seed",
+                    "target": "./web-server/leaflet-approval-app/apps/secure-channels/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/leaflet-approval-app/secure-channels-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-approval-app/secure-channels-template/readme"
+                }
+            ]
+        },
+        {
+            "name": "leaflet-approval-app_bind_to_profile-app",
+            "src": "",
+            "actions": [
+                {
+                    "type": "execute",
+                    "cmd": "cd profile-app && npm run build"
+                },
+                {
+                    "type": "copy",
+                    "src": "./profile-app/seed",
+                    "target": "./web-server/leaflet-approval-app/apps/profile-app/seed",
+                    "options": {
+                        "overwrite": true
+                    }
+                },
+                {
+                    "type": "mkdir",
+                    "target": "./web-server/leaflet-approval-app/profile-app-template"
+                },
+                {
+                    "type": "execute",
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-approval-app/profile-app-template/readme"
                 }
             ]
         }

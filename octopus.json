@@ -26,8 +26,8 @@
             ]
         },
         {
-            "name": "menu-wallet",
-            "src": "http://github.com/privatesky/menu-wallet.git",
+            "name": "menu-wallet-prototype",
+            "src": "http://github.com/privatesky/menu-wallet-prototype.git",
             "actions": [
                 {
                     "type": "smartClone",
@@ -36,13 +36,13 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd menu-wallet && npm install"
+                    "cmd": "cd menu-wallet-prototype && npm install"
                 }
             ]
         },
         {
-            "name": "drug-scan-app",
-            "src": "http://github.com/axiologic/drug-scan-app.git",
+            "name": "package-scan-ssapp-prototype",
+            "src": "http://github.com/axiologic/package-scan-ssapp-prototype.git",
             "actions": [
                 {
                     "type": "smartClone",
@@ -51,13 +51,13 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd drug-scan-app && npm install"
+                    "cmd": "cd package-scan-ssapp-prototype && npm install"
                 }
             ]
         },
         {
-            "name": "leaflet-manager-app",
-            "src": "http://github.com/axiologic/leaflet-manager-app.git",
+            "name": "leaflet-ssapp-prototype",
+            "src": "http://github.com/axiologic/leaflet-ssapp-prototype.git",
             "actions": [
                 {
                     "type": "smartClone",
@@ -66,27 +66,12 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd leaflet-manager-app && npm install"
+                    "cmd": "cd leaflet-ssapp-prototype && npm install"
                 }
             ]
-        },
+        }
         {
-            "name": "leaflet-approval-app",
-            "src": "http://github.com/axiologic/leaflet-approval-app.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd leaflet-approval-app && npm install"
-                }
-            ]
-        },
-        {
-            "name": "web-server/drug-scan-app/loader",
+            "name": "web-server/leaflet-display-wallet/loader",
             "src": "http://github.com/privatesky/web-dossier-loader.git",
             "actions": [
                 {
@@ -96,12 +81,12 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd web-server/drug-scan-app/loader && npm install"
+                    "cmd": "cd web-server/leaflet-display-wallet/loader && npm install"
                 }
             ]
         },
         {
-            "name": "web-server/leaflet-manager-app/loader",
+            "name": "web-server/drug-manufacturer-wallet/loader",
             "src": "http://github.com/privatesky/web-dossier-loader.git",
             "actions": [
                 {
@@ -111,12 +96,12 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd web-server/leaflet-manager-app/loader && npm install"
+                    "cmd": "cd web-server/drug-manufacturer-wallet/loader && npm install"
                 }
             ]
         },
         {
-            "name": "web-server/leaflet-approval-app/loader",
+            "name": "web-server/health-authority-wallet/loader",
             "src": "http://github.com/privatesky/web-dossier-loader.git",
             "actions": [
                 {
@@ -126,13 +111,13 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd web-server/leaflet-approval-app/loader && npm install"
+                    "cmd": "cd web-server/health-authority-wallet/loader && npm install"
                 }
             ]
         },
         {
-            "name": "profile-app",
-            "src": "http://github.com/privatesky/profile-app.git",
+            "name": "profile-ssapp-prototype",
+            "src": "http://github.com/privatesky/profile-ssapp-prototype.git",
             "actions": [
                 {
                     "type": "smartClone",
@@ -141,13 +126,13 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd profile-app && npm install"
+                    "cmd": "cd profile-ssapp-prototype && npm install"
                 }
             ]
         },
         {
-            "name": "secure-channels",
-            "src": "http://github.com/privatesky/secure-channels.git",
+            "name": "secure-channels-ssapp-prototype",
+            "src": "http://github.com/privatesky/secure-channels-ssapp-prototype.git",
             "actions": [
                 {
                     "type": "smartClone",
@@ -156,7 +141,7 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd secure-channels && npm install"
+                    "cmd": "cd secure-channels-ssapp-prototype && npm install"
                 }
             ]
         },
@@ -178,17 +163,17 @@
     ],
     "build": [
         {
-            "name": "drug-scan-app_bind_to_menu-wallet",
+            "name": "leaflet-display-wallet_bind_to_menu-wallet",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd menu-wallet && npm run build"
+                    "cmd": "cd menu-wallet-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./menu-wallet/seed",
-                    "target": "./web-server/drug-scan-app/wallet-template/seed",
+                    "src": "./menu-wallet-prototype/seed",
+                    "target": "./web-server/leaflet-display-wallet/wallet-template/seed",
                     "options": {
                         "overwrite": true
                     }
@@ -196,17 +181,17 @@
             ]
         },
         {
-            "name": "leaflet-manager-app_bind_to_menu-wallet",
+            "name": "drug-manufacturer-wallet_bind_to_menu-wallet",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd menu-wallet && npm run build"
+                    "cmd": "cd menu-wallet-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./menu-wallet/seed",
-                    "target": "./web-server/leaflet-manager-app/wallet-template/seed",
+                    "src": "./menu-wallet-prototype/seed",
+                    "target": "./web-server/drug-manufacturer-wallet/wallet-template/seed",
                     "options": {
                         "overwrite": true
                     }
@@ -214,17 +199,17 @@
             ]
         },
         {
-            "name": "leaflet-approval-app_bind_to_menu-wallet",
+            "name": "health-authority-wallet_bind_to_menu-wallet",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd menu-wallet && npm run build"
+                    "cmd": "cd menu-wallet-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./menu-wallet/seed",
-                    "target": "./web-server/leaflet-approval-app/wallet-template/seed",
+                    "src": "./menu-wallet-prototype/seed",
+                    "target": "./web-server/health-authority-wallet/wallet-template/seed",
                     "options": {
                         "overwrite": true
                     }
@@ -232,200 +217,156 @@
             ]
         },
         {
-            "name": "drug-scan-app_bind_to_drug-scan-app",
+            "name": "leaflet-display-wallet_bind_to_package-scan-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd drug-scan-app && npm run build"
+                    "cmd": "cd package-scan-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./drug-scan-app/seed",
-                    "target": "./web-server/drug-scan-app/apps/drug-scan-app/seed",
+                    "src": "./package-scan-ssapp-prototype/seed",
+                    "target": "./web-server/leaflet-display-wallet/apps/package-scan-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/drug-scan-app/drug-scan-app-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-scan-app/drug-scan-app-template/readme"
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-display-wallet/apps/package-scan-ssapp/readme"
                 }
             ]
         },
         {
-            "name": "drug-scan-app_bind_to_profile-app",
+            "name": "leaflet-display-wallet_bind_to_profile-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd profile-app && npm run build"
+                    "cmd": "cd profile-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./profile-app/seed",
-                    "target": "./web-server/drug-scan-app/apps/profile-app/seed",
+                    "src": "./profile-ssapp-prototype/seed",
+                    "target": "./web-server/leaflet-display-wallet/apps/profile-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/drug-scan-app/profile-app-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-scan-app/profile-app-template/readme"
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-display-wallet/apps/profile-ssapp/readme"
                 }
             ]
         },
         {
-            "name": "leaflet-manager-app_bind_to_leaflet-manager-app",
+            "name": "drug-manufacturer-wallet_bind_to_leaflet-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd leaflet-manager-app && npm run build"
+                    "cmd": "cd leaflet-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./leaflet-manager-app/seed",
-                    "target": "./web-server/leaflet-manager-app/apps/leaflet-manager-app/seed",
+                    "src": "./leaflet-ssapp-prototype/seed",
+                    "target": "./web-server/drug-manufacturer-wallet/apps/leaflet-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/leaflet-manager-app/leaflet-manager-app-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/leaflet-manager-app-template/readme"
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-manufacturer-wallet/apps/leaflet-ssapp/readme"
                 }
             ]
         },
         {
-            "name": "leaflet-manager-app_bind_to_secure-channels",
+            "name": "drug-manufacturer-wallet_bind_to_secure-channels-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd secure-channels && npm run build"
+                    "cmd": "cd secure-channels-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./secure-channels/seed",
-                    "target": "./web-server/leaflet-manager-app/apps/secure-channels/seed",
+                    "src": "./secure-channels-ssapp-prototype/seed",
+                    "target": "./web-server/drug-manufacturer-wallet/apps/secure-channels-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/leaflet-manager-app/secure-channels-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/secure-channels-template/readme"
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-manufacturer-wallet/apps/secure-channels-ssapp/readme"
                 }
             ]
         },
         {
-            "name": "leaflet-manager-app_bind_to_profile-app",
+            "name": "drug-manufacturer-wallet_bind_to_profile-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd profile-app && npm run build"
+                    "cmd": "cd profile-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./profile-app/seed",
-                    "target": "./web-server/leaflet-manager-app/apps/profile-app/seed",
+                    "src": "./profile-ssapp-prototype/seed",
+                    "target": "./web-server/drug-manufacturer-wallet/apps/profile-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/leaflet-manager-app/profile-app-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-manager-app/profile-app-template/readme"
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/drug-manufacturer-wallet/apps/profile-ssapp/readme"
                 }
             ]
         },
         {
-            "name": "leaflet-approval-app_bind_to_secure-channels",
+            "name": "health-authority-wallet_bind_to_secure-channels-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd secure-channels && npm run build"
+                    "cmd": "cd secure-channels-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./secure-channels/seed",
-                    "target": "./web-server/leaflet-approval-app/apps/secure-channels/seed",
+                    "src": "./secure-channels-ssapp-prototype/seed",
+                    "target": "./web-server/health-authority-wallet/apps/secure-channels-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/leaflet-approval-app/secure-channels-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-approval-app/secure-channels-template/readme"
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/health-authority-wallet/apps/secure-channels-ssapp/readme"
                 }
             ]
         },
         {
-            "name": "leaflet-approval-app_bind_to_profile-app",
+            "name": "health-authority-wallet_bind_to_profile-ssapp-prototype",
             "src": "",
             "actions": [
                 {
                     "type": "execute",
-                    "cmd": "cd profile-app && npm run build"
+                    "cmd": "cd profile-ssapp-prototype && npm run build"
                 },
                 {
                     "type": "copy",
-                    "src": "./profile-app/seed",
-                    "target": "./web-server/leaflet-approval-app/apps/profile-app/seed",
+                    "src": "./profile-ssapp-prototype/seed",
+                    "target": "./web-server/health-authority-wallet/apps/profile-ssapp/seed",
                     "options": {
                         "overwrite": true
                     }
                 },
                 {
-                    "type": "mkdir",
-                    "target": "./web-server/leaflet-approval-app/profile-app-template"
-                },
-                {
                     "type": "execute",
-                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/leaflet-approval-app/profile-app-template/readme"
-                }
-            ]
-        }
-    ],
-    "server": [
-        {
-            "name": "server configuration update",
-            "src": "",
-            "actions": [
-                {
-                    "type": "copy",
-                    "src": "server.json",
-                    "target": "./privatesky/conf/server.json",
-                    "options": {
-                        "overwrite": true
-                    }
+                    "cmd": "echo Use this folder template in order to customize the application instance by adding configuration, pages etc. > ./web-server/health-authority-wallet/apps/profile-ssapp/readme"
                 }
             ]
         }

@@ -1,5 +1,5 @@
 {
-  "name": "web-wallet",
+  "name": "ePI-demo-workspace",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,15 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrivateSky/web-wallet.git"
+    "url": "git+https://github.com/axiologic/ePI-demo-workspace.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PrivateSky/web-wallet/issues"
+    "url": "https://github.com/axiologic/ePI-demo-workspace/issues"
   },
-  "homepage": "https://github.com/PrivateSky/web-wallet#readme",
+  "homepage": "https://github.com/axiologic/ePI-demo-workspace#readme",
   "dependencies": {
-    "octopus": "git+http://github.com/privatesky/octopus.git#1.0.3"
+    "octopus": "git+http://github.com/privatesky/octopus.git#1.0.4"
   }
 }

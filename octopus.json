@@ -69,7 +69,7 @@
                     "cmd": "cd leaflet-ssapp-prototype && npm install"
                 }
             ]
-        }
+        },
         {
             "name": "web-server/leaflet-display-wallet/loader",
             "src": "http://github.com/privatesky/web-dossier-loader.git",

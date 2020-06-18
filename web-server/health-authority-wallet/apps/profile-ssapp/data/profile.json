@@ -1,8 +1,8 @@
 {
-  "avatar": "/assets/images/default-avatar.png",
-  "name": "Jon Doe",
+  "avatar": "/data/health_authority_avatar.jpg",
+  "name": "Martha Ryan",
   "phone": "+34 684 24 84 63",
-  "email": "john.led@jhon.es",
+  "email": "martha.ryan@ha.es",
   "birthday": "15/03/1986",
   "address": "Madrid",
   "code": "MDVMEB30409JN3GB",

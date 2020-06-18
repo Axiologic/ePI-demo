@@ -1,8 +1,8 @@
 {
-  "avatar": "/assets/images/default-avatar.png",
-  "name": "John Led",
+  "avatar": "/data/manufacturer_avatar.jpg",
+  "name": "Leonard Robertson",
   "phone": "+34 684 24 84 63",
-  "email": "john.led@jhon.es",
+  "email": "leo.robertson@novartis.com",
   "birthday": "15/03/1986",
   "address": "Madrid",
   "code": "MDVMEB30409JN3GB",

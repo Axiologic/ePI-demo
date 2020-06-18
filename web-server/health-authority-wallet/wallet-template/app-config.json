@@ -21,13 +21,16 @@
         "name": "Home"
       },
       {
-        "name": "Contacts"
-      },
-      {
         "name": "Requests"
       },
       {
+        "name": "New Message"
+      },
+      {
         "name": "Outbox"
+      },
+      {
+        "name": "Contacts"
       },
       {
         "name": "Profile"

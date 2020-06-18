@@ -28,18 +28,22 @@
         "children": [
           {
             "name": "Inbox",
+            "tags": "inbox",
             "pageSrc": "inbox.html"
           },
           {
             "name": "New message",
+            "tags": "new-message",
             "pageSrc": "new-message.html"
           },
           {
             "name": "Outbox",
+            "tags": "outbox",
             "pageSrc": "outbox.html"
           },
           {
             "name": "Contacts",
+            "tags": "contacts",
             "pageSrc": "contacts.html"
           }
         ]

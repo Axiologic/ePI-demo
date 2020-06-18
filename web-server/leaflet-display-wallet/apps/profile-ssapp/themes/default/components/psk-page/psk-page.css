@@ -15,6 +15,11 @@
     width: 100%;
 }
 
+.container {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
 .page-content {
     color: #565656;
     padding: 0 45px 30px;

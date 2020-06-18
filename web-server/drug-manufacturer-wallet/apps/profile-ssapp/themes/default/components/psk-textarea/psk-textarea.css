@@ -1,6 +1,6 @@
-psk-textarea textarea.form-control{
+psk-textarea textarea.form-control {
     height: 300px;
-
+    margin-top: 20px;
 }
 
 textarea.form-control:focus{

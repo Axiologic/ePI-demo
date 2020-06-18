@@ -1,4 +1,5 @@
 {
   "port": 8080,
-  "storage": "../web-server"
+  "storage": "../web-server",
+  "preventRateLimit": true
 }

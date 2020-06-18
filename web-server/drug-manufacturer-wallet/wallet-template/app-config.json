@@ -24,16 +24,25 @@
         "name": "Products"
       },
       {
-        "name": "Contacts"
-      },
-      {
-        "name": "New message"
-      },
-      {
-        "name": "Inbox"
-      },
-      {
-        "name": "Outbox"
+        "name": "Messages",
+        "children": [
+          {
+            "name": "Inbox",
+            "pageSrc": "inbox.html"
+          },
+          {
+            "name": "New message",
+            "pageSrc": "new-message.html"
+          },
+          {
+            "name": "Outbox",
+            "pageSrc": "outbox.html"
+          },
+          {
+            "name": "Contacts",
+            "pageSrc": "contacts.html"
+          }
+        ]
       },
       {
         "name": "Profile"

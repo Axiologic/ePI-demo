@@ -146,7 +146,7 @@
             ]
         },
         {
-            "name": "web-server/fabricate-product",
+            "name": "web-server/production-plant-app",
             "src": "http://github.com/axiologic/fabricate-product.git",
             "actions": [
                 {
@@ -156,7 +156,7 @@
                 },
                 {
                     "type": "execute",
-                    "cmd": "cd web-server/fabricate-product && npm install"
+                    "cmd": "cd web-server/production-plant-app && npm install"
                 }
             ]
         }

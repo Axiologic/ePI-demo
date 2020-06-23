@@ -1,22 +1,20 @@
-{
-  "products": [
-    {
-      "name": "Paracetamol",
-      "productTypeSerialNumber": "asdfsad",
-      "photo": "/data/photos/paracetamol.png",
-      "serialNumber": "1234656789"
-    },
-    {
-      "name": "Aspenter",
-      "productTypeSerialNumber": "askjhggsad",
-      "photo": "/data/photos/aspenter.jpg",
-      "serialNumber": "1234356789"
-    },
-    {
-      "name": "Propolis Plus EPID",
-      "productTypeSerialNumber": "askfdghdfssad",
-      "photo": "/data/photos/propoliplus.jpg",
-      "serialNumber": "1234056789"
-    }
-  ]
-}
+[
+  {
+    "name": "Paracetamol",
+    "productTypeSerialNumber": "asdfsad",
+    "photo": "/data/photos/paracetamol.png",
+    "serialNumber": "1234656789"
+  },
+  {
+    "name": "Aspenter",
+    "productTypeSerialNumber": "askjhggsad",
+    "photo": "/data/photos/aspenter.jpg",
+    "serialNumber": "1234356789"
+  },
+  {
+    "name": "Propolis Plus EPID",
+    "productTypeSerialNumber": "askfdghdfssad",
+    "photo": "/data/photos/propoliplus.jpg",
+    "serialNumber": "1234056789"
+  }
+]

@@ -1,12 +1,10 @@
-{
-  "leaflets": [
-    {
-      "name": "Propolis Plus EPID(USA)",
-      "productId": "1234056789",
-      "activeSubstances": "Propolis / Vitamin C",
-      "recommendations": "Cough / Sore throat",
-      "contraIndications": "Headache",
-      "country": "USA"
-    }
-  ]
-}
+[
+  {
+    "name": "Propolis Plus EPID(USA)",
+    "productId": "1234056789",
+    "activeSubstances": "Propolis / Vitamin C",
+    "recommendations": "Cough / Sore throat",
+    "contraIndications": "Headache",
+    "country": "USA"
+  }
+]

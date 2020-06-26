@@ -24,6 +24,21 @@
         "name": "Products"
       },
       {
+        "name": "Leaflets",
+        "children": [
+          {
+            "name": "All leaflets",
+            "tags": "leaflets",
+            "pageSrc": "leaflets.html"
+          },
+          {
+            "name": "Request Approval",
+            "tags": "request-approval",
+            "pageSrc": "request-approval.html"
+          }
+        ]
+      },
+      {
         "name": "Messages",
         "children": [
           {
@@ -47,9 +62,6 @@
             "pageSrc": "contacts.html"
           }
         ]
-      },
-      {
-        "name": "Leaflets"
       },
       {
         "name": "Profile"

@@ -159,6 +159,66 @@
                     "cmd": "cd web-server/production-plant-app && npm install"
                 }
             ]
+        },
+        {
+            "name": "themes/sunrise-theme",
+            "src": "http://github.com/privatesky/sunrise-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/sunrise-theme && npm install"
+                }
+            ]
+        },
+        {
+            "name": "themes/citrus-theme",
+            "src": "http://github.com/privatesky/citrus-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/citrus-theme && npm install"
+                }
+            ]
+        },
+        {
+            "name": "themes/savana-theme",
+            "src": "http://github.com/privatesky/savana-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/savana-theme && npm install"
+                }
+            ]
+        },
+        {
+            "name": "themes/clear-sky-theme",
+            "src": "http://github.com/privatesky/clear-sky-theme.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd themes/clear-sky-theme && npm install"
+                }
+            ]
         }
     ],
     "build": [

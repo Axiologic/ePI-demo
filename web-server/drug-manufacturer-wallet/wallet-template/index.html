@@ -14,11 +14,9 @@
     <psk-app-root>
         <div class="global_container">
             <aside>
-                <psk-container>
-                    <psk-ssapp app-name="profile-ssapp" class="widget" landing-path="/widget">
-                    </psk-ssapp>
-                </psk-container>
-                <app-menu item-renderer="sidebar-renderer"></app-menu>
+                <app-menu item-renderer="sidebar-renderer">
+                    <psk-ssapp app-name="profile-ssapp" class="widget" landing-path="/widget" slot="before"></psk-ssapp>
+                </app-menu>
             </aside>
             <section>
                 <psk-app-router></psk-app-router>

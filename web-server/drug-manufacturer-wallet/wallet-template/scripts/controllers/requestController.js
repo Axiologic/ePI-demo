@@ -7,10 +7,14 @@ export default class requestController extends ContainerController {
             const newEvent = new Event("send-leaflet");
             newEvent.data = event.data;
             let profileSsapp = element.querySelector("#profileSsapp iframe");
-            profileSsapp.contentWindow.addEventListener("leaflet-sent", (event) => {
-                history.push("/messages/outbox")
-            });
-            profileSsapp.contentWindow.dispatchEvent(newEvent);
+            try{
+                profileSsapp.contentWindow.addEventListener("leaflet-sent", (event) => {
+                    history.push("/messages/outbox")
+                });
+                profileSsapp.contentWindow.dispatchEvent(newEvent);
+            }catch(err){
+                //
+            }
         });
     }
 }

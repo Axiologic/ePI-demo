@@ -1,5 +1,5 @@
 psk-ssapp.widget iframe{
-    height: 200px !important;
+    height: 80px !important;
 }
 
 div.global_container {
@@ -7,24 +7,49 @@ div.global_container {
     flex-direction: row;
     justify-content: flex-start;
     height: 100%;
-    background-color: #f8f9fc;
 }
 
-div.global_container.is-mobile {
+psk-app-root:not(.is-mobile) app-menu{
+    padding-top: 45px;
+}
+
+.is-mobile div.global_container {
     width: 100%;
     flex-direction: column;
 }
 
-.is-mobile aside {
-    width: 100%;
-    height: auto;
-    display: block;
-    overflow: inherit;
-    padding-top: 5px;
+.is-mobile section{
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding-top: 50px;
 }
 
-.is-mobile aside psk-user-profile {
-    position: absolute;
+.is-mobile aside {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    overflow: inherit;
+    display: inline;
+    z-index: 100;
+}
+
+.is-mobile psk-user-profile {
+    display: flex;
+}
+
+.is-mobile psk-user-profile .profile .card-body{
+    padding: 15px 15px 15px 25px;
+}
+
+.is-mobile psk-user-profile img{
+    width: 32px;
+}
+
+.is-mobile psk-user-profile p.card-text{
+    display: none;
 }
 
 aside {
@@ -35,14 +60,14 @@ aside {
     align-items: center;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     order: 1;
-    flex: 1;
     min-width: 320px;
-    display: flex;
+    display: grid!important;
     flex-direction: column;
     overflow: auto;
     scrollbar-color: #11871a #E5E5E5;
     scrollbar-width: thin;
     position: relative;
+    width: 320px;
 }
 
 .nav-footer {
@@ -69,7 +94,10 @@ section {
     scrollbar-width: thin;
 }
 
-app-menu,
+app-menu{
+    height: 100%;
+}
+
 psk-app-router {
     flex-grow: 1;
 }
@@ -120,3 +148,43 @@ section::-webkit-scrollbar-thumb {
 aside::-webkit-scrollbar-button {
     display: none
 }
+
+.navigation-title label{
+    color: #0b5410;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    padding-left: 60px;
+    font-size: 1.802rem;
+}
+
+.navigation-title {
+    display: none;
+}
+
+.menu-row{
+    display: flex;
+}
+
+@media (max-width: 960px) {
+    .navigation-title {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 100;
+    }
+
+    .navigation-title label{
+        background-color: #0b5410;
+        width: 100%;
+        font-size: 1.2rem;
+        color: #fff;
+        padding-left: 20px;
+        font-weight: bold;
+        line-height: 40px;
+        height: 50px;
+    }
+}
+

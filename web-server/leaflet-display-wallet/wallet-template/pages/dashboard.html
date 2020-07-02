@@ -1,0 +1,30 @@
+<psk-page navigation-title="Dashboard" title="Dashboard">
+    <psk-grid columns="3" layout="xs=[12,12,12] s=[12,12,12] m=[6,6,6] l=[6,6,6] xl=[4,4,4]">
+        <psk-link page="scan">
+            <psk-card title="Scan Package" class="epi-card blue">
+                <psk-icon icon="barcode"></psk-icon>
+                <!--<psk-img src="/resources-test/scan_code.png" width="64" height="64"></psk-img>-->
+                <psk-label
+                        label="Scan a drug package code and access the eLeaflet"></psk-label>
+            </psk-card>
+        </psk-link>
+
+        <psk-link page="history">
+            <psk-card title="History" class="epi-card orange">
+                <psk-icon icon="history"></psk-icon>
+                <!--<psk-img src="/resources-test/history.png" width="64" height="64"></psk-img>-->
+                <psk-label
+                        label="Check your history of scanned drug packages"></psk-label>
+            </psk-card>
+        </psk-link>
+
+        <psk-link page="profile">
+            <psk-card title="Profile" class="epi-card green">
+                <psk-icon icon="user"></psk-icon>
+                <!--<psk-img src="/resources-test/profile.png" width="64" height="64"></psk-img>-->
+                <psk-label
+                        label="Customize your user profile and contact details"></psk-label>
+            </psk-card>
+        </psk-link>
+    </psk-grid>
+</psk-page>

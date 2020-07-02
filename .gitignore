@@ -1,14 +1,17 @@
 # Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!bin
-!bin/**
-!octopus
-!octopus/*
-!LICENSE
-!package.json
-!package-lock.json
-!README.md
-!CHANGELOG
+*-prototype
+privatesky
+cardinal
+themes
+node_modules
+.idea
+latest-change-set.txt
+web-server/anchors
+web-server/brick-storage
+web-server/dossier-wizard-storage
+web-server/channels
+web-server/config/confSeed
+web-server/*/loader/
+web-server/*/apps/
+web-server/*/wallet-template/seed
+web-server/production-plant-app

@@ -7,7 +7,6 @@ div.global_container {
     flex-direction: row;
     justify-content: flex-start;
     height: 100%;
-    background-color: #f8f9fc;
 }
 
 psk-app-root:not(.is-mobile) app-menu{
@@ -54,7 +53,7 @@ aside {
     align-items: center;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     order: 1;
-    min-width: 320px;
+    width: 320px;
     display: grid!important;
     grid-template-rows: auto 1fr 40px;
     overflow: auto;

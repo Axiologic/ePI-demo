@@ -8,11 +8,15 @@ RUN git clone https://github.com/Axiologic/ePI-demo-workspace.git $TARGET_FOLDER
 RUN cd $TARGET_FOLDER_NAME && \
     npm install --unsafe-perm
 
+ADD config/env.json /$TARGET_FOLDER_NAME/env.json
+#ADD config/ssl_certs /$TARGET_FOLDER_NAME/web-server/config/ssl/server.crt
+#ADD config/ssl_certs /$TARGET_FOLDER_NAME/web-server/config/ssl/server.key
+
 RUN cd $TARGET_FOLDER_NAME && \
-    echo 'npm run server' >> startup-script.sh
+    echo 'npm run server & \n sleep 3m \n npm run build-all' >> startup-script.sh
 RUN cd $TARGET_FOLDER_NAME && cat startup-script.sh
 
-EXPOSE 8080/tcpexi
+EXPOSE 8080/tcp
 
 CMD cd $TARGET_FOLDER_NAME && \
     bash startup-script.sh

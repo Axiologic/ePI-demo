@@ -12,6 +12,10 @@
                 },
                 {
                     "type": "execute",
+                    "cmd": "cd privatesky && git checkout b61d9cab2aae5e475552038abd6ed0991cf09afc"
+                },
+                {
+                    "type": "execute",
                     "cmd": "cd privatesky && npm install"
                 }
             ]

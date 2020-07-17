@@ -22,16 +22,12 @@
         },
         {
             "name": "privatesky",
-            "src": "http://github.com/privatesky/psk-release.git",
+            "src": "http://github.com/privatesky/privatesky.git",
             "actions": [
                 {
                     "type": "smartClone",
                     "target": ".",
                     "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd privatesky && git checkout b61d9cab2aae5e475552038abd6ed0991cf09afc"
                 },
                 {
                     "type": "execute",
@@ -169,21 +165,6 @@
             ]
         },
         {
-            "name": "web-server/production-plant-app",
-            "src": "http://github.com/axiologic/fabricate-product.git",
-            "actions": [
-                {
-                    "type": "smartClone",
-                    "target": ".",
-                    "collectLog": false
-                },
-                {
-                    "type": "execute",
-                    "cmd": "cd web-server/production-plant-app && npm install"
-                }
-            ]
-        },
-        {
             "name": "themes/sunrise-theme",
             "src": "http://github.com/privatesky/sunrise-theme.git",
             "actions": [
@@ -270,6 +251,21 @@
                 {
                     "type": "execute",
                     "cmd": "cd dossier-explorer-wallet-prototype && npm install"
+                }
+            ]
+        },
+        {
+            "name": "web-server/production-plant-app",
+            "src": "http://github.com/axiologic/fabricate-product.git",
+            "actions": [
+                {
+                    "type": "smartClone",
+                    "target": ".",
+                    "collectLog": false
+                },
+                {
+                    "type": "execute",
+                    "cmd": "cd web-server/production-plant-app && npm install"
                 }
             ]
         },

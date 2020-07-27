@@ -14,7 +14,7 @@ ADD config/web-server /$TARGET_FOLDER_NAME/web-server
 #ADD config/ssl_certs /$TARGET_FOLDER_NAME/web-server/config/ssl/server.key
 
 RUN cd $TARGET_FOLDER_NAME && \
-    echo 'npm run server & \n sleep 3m \n npm run build-all' >> startup-script.sh
+    echo 'npm run server & \n sleep 3m \n npm run build-all \n tail -f /dev/null' >> startup-script.sh
 RUN cd $TARGET_FOLDER_NAME && cat startup-script.sh
 
 EXPOSE 8080/tcp

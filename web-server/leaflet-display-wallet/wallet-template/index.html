@@ -15,7 +15,9 @@
         <div class="global_container">
             <aside>
                 <app-menu item-renderer="sidebar-renderer">
-                    <psk-ssapp app-name="profile-ssapp" class="widget" landing-path="/widget" slot="before"></psk-ssapp>
+                    <psk-container controller-name="WalletSsappLauncher" data-app-name="profile-ssapp" slot="before">
+                        <psk-ssapp key-ssi="@keySSI" class="widget" landing-path="/widget" ></psk-ssapp>
+                    </psk-container>
                 </app-menu>
             </aside>
             <section>
@@ -27,9 +29,9 @@
         </div>
     </psk-app-root>
 
+<script src="/scripts/bundles/hostBoot.js"></script>
 <script src="/scripts/bundles/webshims.js"></script>
 <script src="/scripts/bundles/pskruntime.js"></script>
-<script src="/scripts/bundles/bindableModel.js"></script>
 
 <script type="module" src="/cardinal/cardinal.esm.js"></script>
 <script nomodule src="/cardinal.js"></script>

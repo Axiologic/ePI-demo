@@ -1,7 +1,13 @@
 <psk-container controller-name="requestController">
-    <psk-ssapp app-name="leaflet-ssapp" landing-path="/manage-request" id="leafletSsapp"></psk-ssapp>
+    <psk-container controller-name="WalletSsappLauncher" data-app-name="leaflet-ssapp" id="leafletSsapp">
+        <psk-ssapp key-ssi="@keySSI" landing-path="/manage-request">
+        </psk-ssapp>
+    </psk-container>
 
     <div style="visible:'hidden'; height: 0px; width: 0px;">
-        <psk-ssapp app-name="profile-ssapp" landing-path="/communication" id="profileSsapp"></psk-ssapp>
+        <psk-container controller-name="WalletSsappLauncher" data-app-name="profile-ssapp" id="profileSsapp">
+            <psk-ssapp key-ssi="@keySSI" landing-path="/communication">
+            </psk-ssapp>
+        </psk-container>
     </div>
 </psk-container>
